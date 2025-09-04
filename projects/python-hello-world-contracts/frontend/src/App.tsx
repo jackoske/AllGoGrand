@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { algosdk } from 'algosdk';
+import * as algosdk from 'algosdk';
 import axios from 'axios';
 
 interface AlgorandAccount {
@@ -52,7 +52,7 @@ function App() {
   const generateAccount = () => {
     const account = algosdk.generateAccount();
     const newAccount = {
-      address: account.addr,
+      address: account.addr.toString(),
       privateKey: Buffer.from(account.sk).toString('base64')
     };
     setAccount(newAccount);
@@ -65,7 +65,7 @@ function App() {
     try {
       const kmd = new algosdk.Kmd('a'.repeat(64), 'http://localhost:4002', '');
       const wallets = await kmd.listWallets();
-      const unencryptedWallet = wallets.wallets.find(w => w.name === 'unencrypted-default-wallet');
+      const unencryptedWallet = wallets.wallets.find((w: any) => w.name === 'unencrypted-default-wallet');
       
       if (unencryptedWallet) {
         const walletHandle = await kmd.initWalletHandle(unencryptedWallet.id, '');
@@ -96,7 +96,7 @@ function App() {
     try {
       setLoading(true);
       const info = await algodClient.accountInformation(account.address).do();
-      const balanceInAlgo = info.amount / 1_000_000;
+      const balanceInAlgo = Number(info.amount) / 1_000_000;
       
       setAccountInfo({
         address: account.address,
@@ -120,14 +120,14 @@ function App() {
       if (!drainAccount) {
         const newDrainAccount = algosdk.generateAccount();
         const drainAcct = {
-          address: newDrainAccount.addr,
+          address: newDrainAccount.addr.toString(),
           privateKey: Buffer.from(newDrainAccount.sk).toString('base64')
         };
         setDrainAccount(drainAcct);
       }
 
       const currentDrainAccount = drainAccount || {
-        address: algosdk.generateAccount().addr,
+        address: algosdk.generateAccount().addr.toString(),
         privateKey: Buffer.from(algosdk.generateAccount().sk).toString('base64')
       };
 
@@ -137,14 +137,12 @@ function App() {
       if (amountToDrain > 0) {
         const params = await algodClient.getTransactionParams().do();
         
-        const txn = algosdk.makePaymentTxnWithSuggestedParams(
-          account.address,
-          currentDrainAccount.address,
-          amountToDrain,
-          undefined,
-          undefined,
-          params
-        );
+        const txn = algosdk.makePaymentTxnWithSuggestedParamsFromObject({
+          sender: account.address,
+          receiver: currentDrainAccount.address,
+          amount: amountToDrain,
+          suggestedParams: params
+        });
 
         const privateKeyUint8 = new Uint8Array(Buffer.from(account.privateKey, 'base64'));
         const signedTxn = txn.signTxn(privateKeyUint8);
@@ -172,7 +170,7 @@ function App() {
       
       // Get drain account info to see how much we can transfer back
       const drainInfo = await algodClient.accountInformation(drainAccount.address).do();
-      const drainBalance = drainInfo.amount / 1_000_000;
+      const drainBalance = Number(drainInfo.amount) / 1_000_000;
       
       if (drainBalance > 0.1) {
         const params = await algodClient.getTransactionParams().do();
@@ -180,14 +178,12 @@ function App() {
         // Transfer most funds back (leave some for fees)
         const amountToReturn = Math.floor((drainBalance - 0.1) * 1_000_000);
         
-        const txn = algosdk.makePaymentTxnWithSuggestedParams(
-          drainAccount.address,
-          account.address,
-          amountToReturn,
-          undefined,
-          undefined,
-          params
-        );
+        const txn = algosdk.makePaymentTxnWithSuggestedParamsFromObject({
+          sender: drainAccount.address,
+          receiver: account.address,
+          amount: amountToReturn,
+          suggestedParams: params
+        });
 
         const privateKeyUint8 = new Uint8Array(Buffer.from(drainAccount.privateKey, 'base64'));
         const signedTxn = txn.signTxn(privateKeyUint8);
@@ -239,6 +235,7 @@ function App() {
     if (account) {
       refreshAccountInfo();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account]);
 
   return (
