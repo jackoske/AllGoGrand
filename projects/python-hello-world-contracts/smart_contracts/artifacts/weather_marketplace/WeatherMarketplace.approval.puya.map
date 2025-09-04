@@ -1,0 +1,1391 @@
+{
+  "version": 3,
+  "sources": [
+    "../../weather_marketplace/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAeQ;AAAmB;;;;;AAAnB;AAGA;AAAsB;AAAtB;AAGA;;AAAsB;;;AAAtB;AAGA;AAAyB;AAAzB;AAGA;;AAAiB;;;AAAjB;AAtBR;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;AAAA;;AA+FK;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAXA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AA5CL;;;AA4CK;;;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAxBL;;AAAA;;;;;;;;;AAgC0B;AAAA;AAAA;AAAA;AAAX;AAAP;AAUkB;AAAA;AAAA;AAAA;AAAX;AAAP;AAER;;;AAQ8B;;AAAA;AAAtB;AAAA;AAAA;;AAUkB;AAAA;;AAAA;AAAA;AAAX;AAAP;AAUA;AAAA;AAAA;AAAA;AAA0B;AAA1B;AAAA;AAAA;;AAAA;AACO;AAAP;AAUkB;AAAA;AAAA;AAAA;AAAX;AAAP;AAUO;AAAA;;AAAA;AAAA;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0"
+    },
+    "5": {
+      "op": "bytecblock 0x151f7c75 \"total_tokens_sold\" \"weather_asa_id\" \"token_price\" \"token_duration\" \"is_active\""
+    },
+    "82": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "84": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "87": {
+      "op": "bytec_3 // \"token_price\"",
+      "defined_out": [
+        "\"token_price\""
+      ],
+      "stack_out": [
+        "\"token_price\""
+      ]
+    },
+    "88": {
+      "op": "pushint 10000000 // 10000000",
+      "defined_out": [
+        "\"token_price\"",
+        "10000000"
+      ],
+      "stack_out": [
+        "\"token_price\"",
+        "10000000"
+      ]
+    },
+    "93": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "94": {
+      "op": "bytec_2 // \"weather_asa_id\"",
+      "defined_out": [
+        "\"weather_asa_id\""
+      ],
+      "stack_out": [
+        "\"weather_asa_id\""
+      ]
+    },
+    "95": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "\"weather_asa_id\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"weather_asa_id\"",
+        "0"
+      ]
+    },
+    "96": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "97": {
+      "op": "bytec 4 // \"token_duration\"",
+      "defined_out": [
+        "\"token_duration\""
+      ],
+      "stack_out": [
+        "\"token_duration\""
+      ]
+    },
+    "99": {
+      "op": "pushint 3600 // 3600",
+      "defined_out": [
+        "\"token_duration\"",
+        "3600"
+      ],
+      "stack_out": [
+        "\"token_duration\"",
+        "3600"
+      ]
+    },
+    "102": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "103": {
+      "op": "bytec_1 // \"total_tokens_sold\"",
+      "defined_out": [
+        "\"total_tokens_sold\""
+      ],
+      "stack_out": [
+        "\"total_tokens_sold\""
+      ]
+    },
+    "104": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "\"total_tokens_sold\"",
+        "0"
+      ]
+    },
+    "105": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "106": {
+      "op": "bytec 5 // \"is_active\"",
+      "defined_out": [
+        "\"is_active\""
+      ],
+      "stack_out": [
+        "\"is_active\""
+      ]
+    },
+    "108": {
+      "op": "pushbytes 0x80",
+      "defined_out": [
+        "\"is_active\"",
+        "0x80"
+      ],
+      "stack_out": [
+        "\"is_active\"",
+        "0x80"
+      ]
+    },
+    "111": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "112": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "114": {
+      "op": "bz main_bare_routing@13",
+      "stack_out": []
+    },
+    "117": {
+      "op": "pushbytess 0x79bba1bb 0x6f8977e8 0xdbced911 0x9ada3543 0x5e80db51 0x564c8862 0xde20dcaa 0x2eeebbb9 // method \"get_token_price()uint64\", method \"get_weather_asa_id()uint64\", method \"set_weather_asa_id(uint64)void\", method \"get_token_duration()uint64\", method \"record_token_sale()uint64\", method \"get_total_sales()uint64\", method \"is_contract_active()bool\", method \"get_contract_info()string\"",
+      "defined_out": [
+        "Method(get_contract_info()string)",
+        "Method(get_token_duration()uint64)",
+        "Method(get_token_price()uint64)",
+        "Method(get_total_sales()uint64)",
+        "Method(get_weather_asa_id()uint64)",
+        "Method(is_contract_active()bool)",
+        "Method(record_token_sale()uint64)",
+        "Method(set_weather_asa_id(uint64)void)"
+      ],
+      "stack_out": [
+        "Method(get_token_price()uint64)",
+        "Method(get_weather_asa_id()uint64)",
+        "Method(set_weather_asa_id(uint64)void)",
+        "Method(get_token_duration()uint64)",
+        "Method(record_token_sale()uint64)",
+        "Method(get_total_sales()uint64)",
+        "Method(is_contract_active()bool)",
+        "Method(get_contract_info()string)"
+      ]
+    },
+    "159": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(get_contract_info()string)",
+        "Method(get_token_duration()uint64)",
+        "Method(get_token_price()uint64)",
+        "Method(get_total_sales()uint64)",
+        "Method(get_weather_asa_id()uint64)",
+        "Method(is_contract_active()bool)",
+        "Method(record_token_sale()uint64)",
+        "Method(set_weather_asa_id(uint64)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(get_token_price()uint64)",
+        "Method(get_weather_asa_id()uint64)",
+        "Method(set_weather_asa_id(uint64)void)",
+        "Method(get_token_duration()uint64)",
+        "Method(record_token_sale()uint64)",
+        "Method(get_total_sales()uint64)",
+        "Method(is_contract_active()bool)",
+        "Method(get_contract_info()string)",
+        "tmp%2#0"
+      ]
+    },
+    "162": {
+      "op": "match main_get_token_price_route@5 main_get_weather_asa_id_route@6 main_set_weather_asa_id_route@7 main_get_token_duration_route@8 main_record_token_sale_route@9 main_get_total_sales_route@10 main_is_contract_active_route@11 main_get_contract_info_route@12",
+      "stack_out": []
+    },
+    "180": {
+      "block": "main_after_if_else@15",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "181": {
+      "op": "return",
+      "stack_out": []
+    },
+    "182": {
+      "block": "main_get_contract_info_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "184": {
+      "op": "!",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "185": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "186": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "188": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "189": {
+      "op": "pushbytes 0x151f7c750036576561746865724d61726b6574706c6163652076312e30202d20546f6b656e697a656420576561746865722041504920416363657373",
+      "defined_out": [
+        "0x151f7c750036576561746865724d61726b6574706c6163652076312e30202d20546f6b656e697a656420576561746865722041504920416363657373"
+      ],
+      "stack_out": [
+        "0x151f7c750036576561746865724d61726b6574706c6163652076312e30202d20546f6b656e697a656420576561746865722041504920416363657373"
+      ]
+    },
+    "251": {
+      "op": "log",
+      "stack_out": []
+    },
+    "252": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "253": {
+      "op": "return",
+      "stack_out": []
+    },
+    "254": {
+      "block": "main_is_contract_active_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "256": {
+      "op": "!",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "257": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "258": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "260": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "261": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.is_contract_active",
+      "op": "callsub is_contract_active",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "264": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "0x151f7c75"
+      ]
+    },
+    "265": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%41#0"
+      ]
+    },
+    "266": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "267": {
+      "op": "log",
+      "stack_out": []
+    },
+    "268": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "269": {
+      "op": "return",
+      "stack_out": []
+    },
+    "270": {
+      "block": "main_get_total_sales_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "272": {
+      "op": "!",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "273": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "274": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "276": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "277": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_total_sales",
+      "op": "callsub get_total_sales",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "280": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "0x151f7c75"
+      ]
+    },
+    "281": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%35#0"
+      ]
+    },
+    "282": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "283": {
+      "op": "log",
+      "stack_out": []
+    },
+    "284": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "285": {
+      "op": "return",
+      "stack_out": []
+    },
+    "286": {
+      "block": "main_record_token_sale_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "288": {
+      "op": "!",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "289": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "290": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "292": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "293": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.record_token_sale",
+      "op": "callsub record_token_sale",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "296": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0",
+        "0x151f7c75"
+      ]
+    },
+    "297": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%29#0"
+      ]
+    },
+    "298": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "299": {
+      "op": "log",
+      "stack_out": []
+    },
+    "300": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "301": {
+      "op": "return",
+      "stack_out": []
+    },
+    "302": {
+      "block": "main_get_token_duration_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "304": {
+      "op": "!",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "305": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "306": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "308": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "309": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_token_duration",
+      "op": "callsub get_token_duration",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "312": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "0x151f7c75"
+      ]
+    },
+    "313": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%23#0"
+      ]
+    },
+    "314": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "315": {
+      "op": "log",
+      "stack_out": []
+    },
+    "316": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "317": {
+      "op": "return",
+      "stack_out": []
+    },
+    "318": {
+      "block": "main_set_weather_asa_id_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "320": {
+      "op": "!",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "321": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "322": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "324": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "325": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "328": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.set_weather_asa_id",
+      "op": "callsub set_weather_asa_id",
+      "stack_out": []
+    },
+    "331": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "332": {
+      "op": "return",
+      "stack_out": []
+    },
+    "333": {
+      "block": "main_get_weather_asa_id_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "335": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "336": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "337": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "339": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "340": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_weather_asa_id",
+      "op": "callsub get_weather_asa_id",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "343": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "0x151f7c75"
+      ]
+    },
+    "344": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%13#0"
+      ]
+    },
+    "345": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "346": {
+      "op": "log",
+      "stack_out": []
+    },
+    "347": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "348": {
+      "op": "return",
+      "stack_out": []
+    },
+    "349": {
+      "block": "main_get_token_price_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "351": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "352": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "353": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "355": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "356": {
+      "callsub": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_token_price",
+      "op": "callsub get_token_price",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "359": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "0x151f7c75"
+      ]
+    },
+    "360": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%7#0"
+      ]
+    },
+    "361": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "362": {
+      "op": "log",
+      "stack_out": []
+    },
+    "363": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "364": {
+      "op": "return",
+      "stack_out": []
+    },
+    "365": {
+      "block": "main_bare_routing@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "367": {
+      "op": "bnz main_after_if_else@15",
+      "stack_out": []
+    },
+    "370": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "372": {
+      "op": "!",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "373": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "374": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "375": {
+      "op": "return",
+      "stack_out": []
+    },
+    "376": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_token_price",
+      "params": {},
+      "block": "get_token_price",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "377": {
+      "op": "bytec_3 // \"token_price\"",
+      "defined_out": [
+        "\"token_price\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"token_price\""
+      ]
+    },
+    "378": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "379": {
+      "error": "check self.token_price exists",
+      "op": "assert // check self.token_price exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "380": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "381": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "382": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_weather_asa_id",
+      "params": {},
+      "block": "get_weather_asa_id",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "383": {
+      "op": "bytec_2 // \"weather_asa_id\"",
+      "defined_out": [
+        "\"weather_asa_id\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"weather_asa_id\""
+      ]
+    },
+    "384": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "385": {
+      "error": "check self.weather_asa_id exists",
+      "op": "assert // check self.weather_asa_id exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "386": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "387": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "388": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.set_weather_asa_id",
+      "params": {
+        "asa_id#0": "bytes"
+      },
+      "block": "set_weather_asa_id",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "391": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "asa_id#0 (copy)"
+      ],
+      "stack_out": [
+        "asa_id#0 (copy)"
+      ]
+    },
+    "393": {
+      "op": "btoi",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "394": {
+      "op": "bytec_2 // \"weather_asa_id\"",
+      "defined_out": [
+        "\"weather_asa_id\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "\"weather_asa_id\""
+      ]
+    },
+    "395": {
+      "op": "swap",
+      "stack_out": [
+        "\"weather_asa_id\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "396": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "397": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "398": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_token_duration",
+      "params": {},
+      "block": "get_token_duration",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "399": {
+      "op": "bytec 4 // \"token_duration\"",
+      "defined_out": [
+        "\"token_duration\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"token_duration\""
+      ]
+    },
+    "401": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "402": {
+      "error": "check self.token_duration exists",
+      "op": "assert // check self.token_duration exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "403": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "404": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "405": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.record_token_sale",
+      "params": {},
+      "block": "record_token_sale",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "406": {
+      "op": "bytec_1 // \"total_tokens_sold\"",
+      "defined_out": [
+        "\"total_tokens_sold\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_tokens_sold\""
+      ]
+    },
+    "407": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "408": {
+      "error": "check self.total_tokens_sold exists",
+      "op": "assert // check self.total_tokens_sold exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "409": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "1"
+      ]
+    },
+    "410": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "411": {
+      "op": "bytec_1 // \"total_tokens_sold\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "\"total_tokens_sold\""
+      ]
+    },
+    "412": {
+      "op": "dig 1",
+      "defined_out": [
+        "\"total_tokens_sold\"",
+        "materialized_values%0#0",
+        "materialized_values%0#0 (copy)"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "\"total_tokens_sold\"",
+        "materialized_values%0#0 (copy)"
+      ]
+    },
+    "414": {
+      "op": "app_global_put",
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "415": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "416": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "417": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.get_total_sales",
+      "params": {},
+      "block": "get_total_sales",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "418": {
+      "op": "bytec_1 // \"total_tokens_sold\"",
+      "defined_out": [
+        "\"total_tokens_sold\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_tokens_sold\""
+      ]
+    },
+    "419": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "420": {
+      "error": "check self.total_tokens_sold exists",
+      "op": "assert // check self.total_tokens_sold exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "421": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "422": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "423": {
+      "subroutine": "smart_contracts.weather_marketplace.contract.WeatherMarketplace.is_contract_active",
+      "params": {},
+      "block": "is_contract_active",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "424": {
+      "op": "bytec 5 // \"is_active\"",
+      "defined_out": [
+        "\"is_active\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_active\""
+      ]
+    },
+    "426": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "427": {
+      "error": "check self.is_active exists",
+      "op": "assert // check self.is_active exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "428": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
